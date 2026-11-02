@@ -121,23 +121,6 @@ docs/                     Algorithm, data interface and reproduction notes
 .github/workflows/        Code-only check and CPU synthetic tests
 ```
 
-## Before uploading to GitHub
-
-Create a new repository from this folder, not from the original experiment or
-sample-release directories. Run the code-only check before upload. For command
-line Git, the optional hook adds an index check:
-
-```bash
-git init
-git config core.hooksPath .githooks
-git add .
-python scripts/verify_code_only.py --tracked
-```
-
-Review the staged file list before committing. `.gitignore` and the checker
-provide safeguards; neither replaces a review of new source text. No historical
-Git repository or experimental artifacts are included in this package.
-
 ## Publication metadata and license
 
 The paper title above is supplied by the authors. No DOI, acceptance status,
