@@ -2,7 +2,6 @@
 
 Code for **Target-aware global–local infrared–visible image registration for small unmanned aerial vehicle targets**.
 
-[中文说明](README.zh-CN.md)
 
 ## Release scope
 
