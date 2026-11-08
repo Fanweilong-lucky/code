@@ -46,7 +46,7 @@ labels/
 *.pptx
 *.local.json
 *.private.json
-calibration_v*.json
+calibration_*.json
 .env
 .env.*
 *.pem
