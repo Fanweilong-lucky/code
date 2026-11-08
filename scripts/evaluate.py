@@ -12,9 +12,9 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import numpy as np
 import torch
-from v32_registration.core import base, v31
-from v32_registration.point_metrics import replay_global_point, replay_local_forward_point
-from v32_registration.training import fresh_output
+from target_registration.core import base, global_local_base
+from target_registration.point_metrics import replay_global_point, replay_local_forward_point
+from target_registration.training import fresh_output
 
 
 def main():
@@ -62,9 +62,9 @@ def main():
                 angle_deg=prior["base_angle_deg"],
                 scale_x=prior["base_scale_x"], scale_y=prior["base_scale_y"],
             )
-            px, py = replay_global_point(v31, ix, iy, prior_meta)
+            px, py = replay_global_point(global_local_base, ix, iy, prior_meta)
         elif source in ("global", "highres_target"):
-            px, py = replay_global_point(v31, ix, iy, meta)
+            px, py = replay_global_point(global_local_base, ix, iy, meta)
             if source == "highres_target":
                 px, py, converged, _, residual, _ = replay_local_forward_point(base, px, py, meta)
         else:

@@ -11,9 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 import torch
-from v32_registration.data import validate_keys
-from v32_registration.inference import imwrite_png, load_model, register_one
-from v32_registration.training import fresh_output
+from target_registration.data import validate_keys
+from target_registration.inference import imwrite_png, load_model, register_one
+from target_registration.training import fresh_output
 
 
 def main():

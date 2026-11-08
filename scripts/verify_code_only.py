@@ -1,7 +1,7 @@
 """Reject non-code payloads and common private-path/credential patterns.
 
 This is a local release check, not a guarantee that arbitrary source text is
-nonconfidential. Review source edits before publishing. No files are uploaded.
+nonconfidential. Review source edits before sharing. No files are uploaded.
 """
 
 import argparse
