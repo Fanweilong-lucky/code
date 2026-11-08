@@ -1,0 +1,3 @@
+#!/bin/sh
+# Opt in with: git config core.hooksPath .githooks
+exec python scripts/verify_code_only.py --tracked
