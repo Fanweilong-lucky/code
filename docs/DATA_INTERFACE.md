@@ -1,7 +1,7 @@
 # Private data interface
 
 No images, annotations, split membership lists or fitted artifacts are supplied.
-All paths below describe a user-created dataset outside the repository.
+All paths below describe separately authorized data outside the repository.
 
 ## Image and visible-box inputs
 
@@ -35,11 +35,11 @@ local_residual_dx_px, local_residual_dy_px
 
 Coordinates and displacements are in original-image pixels. Positive image axes
 point right and down. Transformation conventions follow
-`core/v31.py::transform_points_anisotropic` and its centered inverse-sampling
+`core/global_local_base.py::transform_points_anisotropic` and its centered inverse-sampling
 counterpart `warp_anisotropic_px`; preserve those conventions when constructing
 new annotations. The visible image is fixed and infrared image is moving.
 The two manual local-correction fields are distinct from target-center-derived
-supervision used by the final V32 optimization stage.
+supervision used by the final target-local correlation optimization stage.
 
 The split JSON has three keys: `train`, `val`, `test`, each mapping to a list of
 string IDs. IDs may contain letters, digits, underscores and hyphens; lists must
@@ -54,10 +54,11 @@ Inference is independent of the manual registration GT CSV.
 
 ## Calibration and checkpoints
 
-No trained checkpoint or fitted threshold is included. Train V31 and then V32
-to generate `best_joint.pt`, `v32_final.pt` and matching calibration files.
+No trained checkpoint or fitted threshold is included. Train the base model and
+then complete the proposed method's target-local correlation stage
+to generate `best_joint.pt`, `proposed_final.pt` and matching calibration files.
 Alternatively use separately authorized checkpoints from the same architecture.
-V32 checkpoint dictionaries contain `model` and `prior_stats`; the latter contains
+The proposed method's checkpoint dictionaries contain `model` and `prior_stats`; the latter contains
 `base_angle_deg`, `base_scale_x`, `base_scale_y`.
 
 Inference calibration must contain numeric `confidence_threshold_error_px` and
