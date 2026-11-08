@@ -1,7 +1,10 @@
-# Peer-review evaluation only
+# Peer-review evaluation only — commercial use prohibited
 
 All rights are reserved by the applicable copyright holders except for the
 limited permission described below.
+
+The public availability of this repository does not grant an open-source license,
+a general research-use license, or any commercial-use permission.
 
 This code and its accompanying documentation are supplied solely to authorized
 journal editors and peer reviewers for confidential evaluation of the associated
