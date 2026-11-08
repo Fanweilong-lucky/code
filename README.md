@@ -2,21 +2,10 @@
 
 Companion code for **Target-aware global–local infrared–visible image registration for small unmanned aerial vehicle targets**.
 
-## Usage notice — peer review only; commercial use prohibited
+## Usage notice
 
-This repository is publicly accessible to facilitate editorial and peer-review
-evaluation of the associated manuscript. Permission to inspect and execute the
-code is limited to authorized journal editors and peer reviewers for that purpose.
-
-**Commercial use is prohibited without prior written authorization from the
-relevant copyright holders**, including incorporation into commercial products
-or services. Redistribution, sublicensing, and other uses outside the peer-review
-process also require prior written authorization.
-
-Public access does not grant an open-source license, a general research-use
-license, or any commercial-use permission. All rights are reserved except for
-the limited peer-review permission in [LICENSE.md](LICENSE.md). Third-party
-dependencies remain subject to their respective licenses.
+This code is authorized only for journal editors and peer reviewers to inspect
+and run for manuscript evaluation; commercial use without permission is prohibited.
 
 ## Method
 
